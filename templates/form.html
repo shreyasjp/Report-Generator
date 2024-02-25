@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Form</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Report Form</h1>
+    <form action="/submit" method="post">
+        <label for="pgm_title">Program Title:</label>
+        <input type="text" id="pgm_title" name="pgm_title" value="{{ default_values['pgm_title'] }}"><br>
+        
+        <label for="venue">Venue / Platform:</label>
+        <input type="text" id="venue" name="venue" value="{{ default_values['venue'] }}"><br>
+        
+        <label for="date">Date (YYYY-MM-DD):</label>
+        <input type="text" id="date" name="date" value="{{ default_values['date'] }}"><br>
+        
+        <label for="time">Time:</label>
+        <input type="text" id="time" name="time" value="{{ default_values['time'] }}"><br>
+        
+        <label for="resource_person">Resource Person:</label>
+        <input type="text" id="resource_person" name="resource_person" value="{{ default_values['resource_person'] }}"><br>
+        
+        <label for="collab_agency">Collaborating Agency (if any):</label>
+        <input type="text" id="collab_agency" name="collab_agency" value="{{ default_values['collab_agency'] }}"><br>
+        
+        <label for="level">Level:</label>
+        <input type="text" id="level" name="level" value="{{ default_values['level'] }}"><br>
+        
+        <label for="no_teach">No. of Teacher Participants:</label>
+        <input type="number" id="no_teach" name="no_teach" value="{{ default_values['no_teach'] }}"><br>
+        
+        <label for="no_stud">No. of Student Participants:</label>
+        <input type="number" id="no_stud" name="no_stud" value="{{ default_values['no_stud'] }}"><br>
+        
+        <label for="short_write_up">Short Write-up:</label>
+        <textarea id="short_write_up" name="short_write_up">{{ default_values['short_write_up'] }}</textarea><br>
+        
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills" value="{{ default_values['skills'] }}"><br>
+        
+        <label for="link">Web Link of the Programme (if any):</label>
+        <input type="text" id="link" name="link" value="{{ default_values['link'] }}"><br>
+        
+        <label for="signatures">Signatures of Convenor/Head/Principal (as necessary):</label>
+        <input type="text" id="signatures" name="signatures" value="{{ default_values['signatures'] }}"><br>
+        
+        <label for="name_doc_crtr">Name of the Faculty Who Prepared the Document:</label>
+        <input type="text" id="name_doc_crtr" name="name_doc_crtr" value="{{ default_values['name_doc_crtr'] }}"><br>
+        
+        <label for="phn_doc_crtr">Phone Number of the Faculty Who Prepared the Document:</label>
+        <input type="text" id="phn_doc_crtr" name="phn_doc_crtr" value="{{ default_values['phn_doc_crtr'] }}"><br>
+        
+        <label for="dept">Department:</label>
+        <input type="text" id="dept" name="dept" value="{{ default_values['dept'] }}"><br>
+        
+        <!-- <label for="brochure">Brochure/Poster:</label>
+        <input type="file" id="brochure" name="brochure" accept="image/*"><br>
+        
+        <label for="cert">Sample Certificate (if issued):</label>
+        <input type="file" id="cert" name="cert" accept="image/*"><br>
+        
+        <label for="attnd_std">Attendance Sheet (Students):</label>
+        <input type="file" id="attnd_std" name="attnd_std" accept="image/*"><br>
+        
+        <label for="attnd_teach">Attendance Sheet (Teachers):</label>
+        <input type="file" id="attnd_teach" name="attnd_teach" accept="image/*"><br>
+        
+        <label for="pic1">Geotagged Images:</label>
+        <input type="file" id="pic1" name="pic1" accept="image/*"><br>
+        <input type="file" id="pic2" name="pic2" accept="image/*"><br>
+        <input type="file" id="pic3" name="pic3" accept="image/*"><br> -->
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
