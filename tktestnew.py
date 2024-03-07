@@ -54,7 +54,20 @@ def generate_report():
     # Placeholder replacements for images
     for placeholder, image_path in images.items():
         if image_path:
-            image_replace(doc, placeholder, image_path, 10)
+            if placeholder == "images#brochure":
+                image_replace(doc, placeholder, image_path, 8)
+            elif placeholder == "images#cert":
+                image_replace(doc, placeholder, image_path, 10)
+            elif placeholder == "images#attnd-stud":
+                image_replace(doc, placeholder, image_path, 8)
+            elif placeholder == "images#attnd-teach":
+                image_replace(doc, placeholder, image_path, 8)
+            elif placeholder == "images#pic1":
+                image_replace(doc, placeholder, image_path, 5)
+            elif placeholder == "images#pic2":
+                image_replace(doc, placeholder, image_path, 5)
+            elif placeholder == "images#pic3":
+                image_replace(doc, placeholder, image_path, 5)
 
     # Save modified Word document
     report_name = pgm_title + '_Report.docx'
