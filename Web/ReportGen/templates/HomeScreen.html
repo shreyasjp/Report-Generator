@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Report Generator</h1>
+        <div class="form-container">
+            <form action="/PostData" class="data-form">
+                {% csrf_token %}
+                <div class="input-box" id="pgm-title-box">
+                    <input type="text" class="text-input" id="pgm-title-input" name="pgm-title" required>
+                    <label class="input-label" id="pgm-title-label" for="pgm-title">Event Title</label>
+                </div>
+                <div class="input-box" id="venue-box">
+                    <input type="text" class="text-input" id="venue-input" name="venue" required>
+                    <label class="input-label" id="venue-label" for="venue">Venue</label>
+                </div>
+                <div class="input-box" id="date-box">
+                    <input type="date" class="text-input" id="date-input" name="date" required>
+                    <label class="input-label" id="date-label" for="date">Date</label>
+                </div>
+                <div class="input-box" id="time-box">
+                    <input type="time" class="text-input" id="time-input" name="time">
+                    <label class="input-label" id="time-label" for="time">Time</label>
+                </div>
+                <div class="input-box" id="resource-person-box">
+                    <input type="text" class="text-input" id="resource-person-input" name="resource_person">
+                    <label class="input-label" id="resource-person-label" for="resource-person">Resource Person</label>
+                </div>
+                <div class="input-box" id="collab-agency-box">
+                    <input type="text" class="text-input" id="collab-agency-input" name="collab_agency">
+                    <label class="input-label" id="collab-agency-label" for="collab-agency">Collaborating Agency</label>
+                </div>
+                <div class="input-box" id="level-box">
+                    <input type="text" class="text-input" id="level-input" name="level" required>
+                    <label class="input-label" id="level-label" for="level">Level</label>
+                </div>
+                <div class="input-box" id="teachers-box">
+                    <input type="number" class="text-input" id="teachers-input" name="teachers">
+                    <label class="input-label" id="teachers-label" for="teachers">Number of Teachers</label>
+                </div>
+                <div class="input-box" id="students-box">
+                    <input type="number" class="text-input" id="students-input" name="students">
+                    <label class="input-label" id="students-label" for="students">Number of Students</label>
+                </div>
+                <div class="text-area-box" id="description-box">
+                    <textarea class="text-area" id="description-input" name="description" required></textarea>
+                    <label class="text-area-label" id="description-label" for="description">Short Write-up</label>
+                </div>
+                <div class="text-area-box" id="skills-box">
+                    <textarea class="text-area" id="skills-input" name="skills" required></textarea>
+                    <label class="text-area-label" id="skills-label" for="skills">Skills Acquired</label>
+                </div>
+                <div class="input-box" id="link-box">
+                    <input type="text" class="text-input" id="link-input" name="link">
+                    <label class="input-label" id="link-label" for="link">Link</label>
+                </div>
+                <div class="input-box" id="doc-creator-box">
+                    <input type="text" class="text-input" id="doc-creator-input" name="doc-creator" required>
+                    <label class="input-label" id="doc-creator-label" for="doc-creator">Document Created</label>
+                </div>
+                <div class="input-box" id="phone-box">
+                    <input type="text" class="text-input" id="phone-input" name="phone" required>
+                    <label class="input-label" id="phone-label" for="phone">Contact Number</label>
+                </div>
+                <div class="dropdown-box" id="dept-box">
+                    <input type="text" class="dropdown-input" id="dept-input" name="dept" required>
+                    <label class="dropdown-label" id="dept-label" for="dept">Department</label>
+                </div>
+                <button type="submit" class="submit-button" id="submit-input">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
